@@ -11,10 +11,10 @@ export class AppComponent {
   todo;
 
   add(item: HTMLInputElement) {
-    this.todos.push({
+    this.todos = [...this.todos, {
       value: item.value,
       done: false
-    });
+    }];
 
     item.value = '';
   }
