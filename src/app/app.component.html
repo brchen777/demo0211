@@ -3,8 +3,9 @@
     <app-title></app-title>
     <input class="new-todo" autofocus
       [placeholder]="inputHint"
-      (keyup.enter)="add(iKeyword)"
-      #iKeyword
+      [(ngModel)]="todo"
+      (keyup.enter)="add(newTodo)"
+      #newTodo
     >
   </header>
   <!-- This section should be hidden by default and shown when there are todos -->
